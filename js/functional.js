@@ -15,9 +15,14 @@ function updateValue(fieldId, amount) {
     const newTotal = previousTotal + amount;
     totalFiled.innerText = newTotal;
 }
-
+// handle Deposit Button
 document.getElementById('deposit-button').addEventListener('click', function () {
     const amount = getInputValue('deposit-input');
-    console.log(amount);
     updateValue('deposit-total', amount);
+})
+
+// handle withdraw Button
+document.getElementById('withdraw-button').addEventListener('click', function () {
+    const amount = getInputValue('withdraw-input');
+    updateValue('withdraw-total', amount);
 })
